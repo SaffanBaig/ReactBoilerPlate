@@ -12,7 +12,6 @@ const Routes = [
         component: lazy(() => import('path of your view')),
         exact: Boolean true or false,
         protected: Boolean true or false,
-        role: admin or user
     }
     */
     {
@@ -24,7 +23,7 @@ const Routes = [
     {
         path: '/mb',
         component: lazy(() => import('../../components/Error/Test')),
-        exact: true,
+        exact: false,
         protected: false
     }
 ]

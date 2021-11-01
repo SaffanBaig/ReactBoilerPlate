@@ -7,16 +7,6 @@ import { DefaultRoute, Routes } from './routes';
 
 const Router = () => {
 
-    const ResolveRoutes = () => {
-        console.log(Routes)
-        Routes.map(route => {
-            return(
-                <Route path={route?.path} exact={route.exact} component={route?.component} />
-            )
-            
-        })
-
-    }
     return (
             <AppRouter basename={process.env.REACT_APP_BASENAME}>
                 <DefaultLayout>
@@ -30,13 +20,13 @@ const Router = () => {
                         />
                         {Routes.map(route => {
                             return(
-                                <Route path={route?.path} exact={route.exact} component={route?.component} />
+                                <Route path={route?.path} exact={route?.exact} component={route?.component} />
                             )
                             
                         })}
                         {/* <Route path="/nb" exact component={lazy(() => import('../components/Error/Test'))} /> */}
                         {/* {ResolveRoutes()} */}
-                        {/* <Route path='*' component={NotFound} /> */}
+                        <Route path='*' component={NotFound} />
                     </Switch>
                 </DefaultLayout>
             </AppRouter>
